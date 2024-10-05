@@ -1,0 +1,103 @@
+/* General */
+body {
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: yellow; /* Considera usar otro color para el fondo si el amarillo es muy fuerte */
+    padding: 0;
+    align-items: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: yellow; /* Podrías cambiar este color si quieres más contraste */
+}
+
+/* Menu Lateral */
+.navbar-toggler {
+    margin-right: 20px; /* Espacio entre el botón de menú y el buscador */
+    background-color: white;
+}
+
+/* Buscador centrado */
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+    max-width: 300px; /* Ajusta el ancho de la barra de búsqueda */
+}
+
+/* Carrito */
+.navbar-brand {
+    margin-left: 20px; /* Espacio entre el buscador y el carrito */
+}
+
+@media (max-width: 768px) {
+    /* Ajustes responsivos */
+    .form-control {
+        max-width: 200px;
+    }
+}
+
+/* CONTENIDO */
+.products-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.product-card {
+    width: 200px; /* Podrías ajustar este valor para mayor flexibilidad en pantallas más grandes */
+    margin: 20px; /* Aumentado para dar más espacio entre productos */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra más suave */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Añadida animación a la sombra */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2); /* Sombra más fuerte al hacer hover */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.new-price {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.discount {
+    color: #5cb85c;
+    font-weight: bold;
+}
